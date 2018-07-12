@@ -96,6 +96,7 @@ j=1;
     model.W          = 1;
     Dtrue            = F(mtrue, Q, model);
     Dtrue            = reshape(Dtrue, nrec, nsrc, length(model.freq));
+    Dobs             = Dtrue;
     for i = 1:size(Dtrue,3)
       Dobs(:,:,i)             = Mask .* Dtrue(:,:,i);
     end
