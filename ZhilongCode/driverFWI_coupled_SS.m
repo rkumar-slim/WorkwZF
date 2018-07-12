@@ -103,7 +103,8 @@ j=1;
     %%%%To be deleted comments: There should be two different W going in
     %%%%here?
     model.W          = W;
-    Dfull            = spg_interp(Dtrue,Dobs,Dapprox,model,Mask);  % <****************why is this calling a mask?
+    % Dfull            = spg_interp(Dtrue,Dobs,Dapprox,model,Mask);  % <****************why is this calling a mask?
+    Dfull            = spg_interp(Dtrue,Dapprox,model,Mask);
    % fobj             = @(x)misfit(x,Q,Dfull(:),model);          %need to put Dfull back into vector form here
     %%alpha3           = 100;
    % %fobj             = @(x) misfit_regularization(x,Q,Dobs,model,alpha3);
