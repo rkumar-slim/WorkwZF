@@ -94,6 +94,8 @@ j=1;
     Dapprox          = F(m0, Q, model);  % m0 is the blurred model initially)
     Dapprox          = reshape(Dapprox, nrec, K, length(model.freq));  %use this only if j=1,  model.freq = freq_partition(j,:)
     model.W          = 1;
+    model.nrec       = nrec;
+    model.nsrc       = nsrc;
     Dtrue            = F(mtrue, Q, model);
     Dtrue            = reshape(Dtrue, nrec, nsrc, length(model.freq));
     Dobs             = Dtrue;
