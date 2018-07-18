@@ -1,7 +1,9 @@
 clear;clc; close all
 
 ToolMainDir = '../Code';
+SPGL1Dir    = '../spgl1';
 addpath(genpath(ToolMainDir));
+addpath(genpath(SPLG1Dir));
 
 s = RandStream('mt19937ar','Seed',1);
 RandStream.setGlobalStream(s);
