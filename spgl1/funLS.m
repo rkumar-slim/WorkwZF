@@ -1,6 +1,6 @@
 function [f,g] = funLS(r, params)
 
-if isfield(params,'ls')
+if ~isfield(params,'ls')
   params.ls = 1;
 end
 
